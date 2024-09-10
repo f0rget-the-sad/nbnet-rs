@@ -1,0 +1,17 @@
+[package]
+name = "libnbnet-sys"
+version = "0.1.0"
+build = "build.rs"
+edition = "2021"
+links = "nbnet"
+# XXX: add license, authors, etc
+
+[lib]
+name = "libnbnet_sys"
+path = "lib.rs"
+
+[dependencies]
+libc = "0.2"
+
+[build-dependencies]
+cc = { version = "1.0.43", features = ['parallel'] }
